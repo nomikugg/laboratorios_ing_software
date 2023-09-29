@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Registro y Login</title>
+  </head>
+  <body>
+    <div id="login" class="formulario">
+      <form id="login-form">
+        <label for="login-cuenta">Cuenta:</label>
+        <input type="text" id="login-cuenta" required />
+
+        <label for="login-clave">Clave:</label>
+        <input type="password" id="login-clave" required />
+
+        <button type="button" onclick="iniciarSesion()">Iniciar Sesión</button>
+      </form>
+
+      <p>
+        ¿No tienes una cuenta?
+        <button class="toggle-btn" onclick="toggleForm()">Regístrate</button>
+      </p>
+    </div>
+    <div id="registro" class="formulario registro-form">
+      <form id="registro-form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required />
+
+        <label for="cuenta">Cuenta:</label>
+        <input type="text" id="cuenta" required />
+
+        <label for="clave">Clave:</label>
+        <input type="password" id="clave" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <button type="button" onclick="registrar()">Registrar</button>
+      </form>
+
+      <p>
+        ¿Ya tienes una cuenta?
+        <button class="toggle-btn" onclick="toggleForm()">Inicia Sesión</button>
+      </p>
+    </div>
+    <div id="user-list" class="formulario">
+      <h1>Lista de Usuarios</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Cuenta</th>
+            <th>Email</th>
+            <th>Rol</th>
+          </tr>
+        </thead>
+        <tbody id="user-list-body">
+          <!-- La lista de usuarios se mostrará aquí -->
+        </tbody>
+      </table>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
